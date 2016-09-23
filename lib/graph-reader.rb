@@ -5,7 +5,7 @@ module GraphReader
   class Graph
     include ReadHelper
 
-    attr_accessor :edges, :nodes, :adj_matrix, :edges_hash
+    attr_accessor :edges, :nodes, :adj_matrix
 
     def initialize(edge_path)
       raise ArgumentError, "expect (String), got #{edge_path.class}" unless edge_path.instance_of? String
@@ -13,9 +13,6 @@ module GraphReader
       @edges = []
       
       init_edges(edge_path)
-      
-      @edges_hash = {}
-      set_edges_hash(@edges_hash)
 
       @adj_map = {}
       set_adj_map(@adj_map)
@@ -41,13 +38,6 @@ module GraphReader
         @edges << new_edge
         add_node(new_edge.src)
         add_node(new_edge.dst)
-      end
-    end
-
-    def set_edges_hash(e_hash)
-      @edges.each do |edge|
-        e_hash[[edge.src, edge.dst]] = edge
-        e_hash[[edge.dst, edge.src]] = edge
       end
     end
 
