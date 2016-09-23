@@ -1,4 +1,5 @@
 <a href="https://codeclimate.com/github/shadow3x3x3/graph-reader"><img src="https://codeclimate.com/github/shadow3x3x3/graph-reader/badges/gpa.svg" /></a>
+[![Build Status](https://travis-ci.org/shadow3x3x3/graph-reader.svg?branch=master)](https://travis-ci.org/shadow3x3x3/graph-reader)
 [![Gem Version](https://badge.fury.io/rb/graph-reader.svg)](https://badge.fury.io/rb/graph-reader)
 # Graph-Reader
 
