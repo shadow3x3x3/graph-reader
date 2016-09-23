@@ -36,7 +36,7 @@ module GraphReader
     end
 
     def add_edge(edge)
-      new_edge = Edge.new(edge)
+      new_edge = GraphReader::Edge.new(edge)
       unless duplicate_edge?(new_edge)
         @edges << new_edge
         add_node(new_edge.src)
