@@ -64,6 +64,10 @@ module GraphReader
       end
     end
 
+    def neighbor?(n1, n2)
+      @adj_matrix[@adj_map[n1]][@adj_map[n2]] == 1
+    end
+
     def duplicate_edge?(new_edge)
       @edges.each { |edge| return true if same_edge?(edge, new_edge) }
       false
